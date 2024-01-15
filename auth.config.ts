@@ -8,8 +8,8 @@ export const authConfig = {
     authorized({ auth, request: { nextUrl } }) {
       const isLoggedIn = !!auth?.user;
       const isOnDashboard = nextUrl.pathname.startsWith('/dashboard');
-      console.log(isLoggedIn);
-      console.log(isOnDashboard);
+      console.log('Estoy logeado', isLoggedIn);
+      console.log('Estoy en el Dashboard', isOnDashboard);
 
       if (isOnDashboard) {
         if (isLoggedIn) return true;
